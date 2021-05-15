@@ -1,10 +1,15 @@
-import { StyleSheet, Platform, StatusBar } from "react-native";
+import { StyleSheet, Platform, StatusBar, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
-  carContainer: {
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  buttonContainer: {
     width: "100%",
-    height: "100%",
+    position: "absolute",
+    bottom: 50,
+  },
+  carContainer: {
+    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    width: "100%",
+    height: Dimensions.get("window").height,
   },
   image: {
     width: "100%",
@@ -15,13 +20,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#000",
   },
+  subTitleCTA: {
+    textDecorationLine: "underline",
+  },
   title: {
     fontSize: 40,
     fontWeight: "600",
-    elevation: 1,
   },
   titles: {
-    marginTop: "20%",
+    marginTop: "30%",
     width: "100%",
     alignItems: "center",
   },
